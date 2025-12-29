@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apple</title>
+    <link rel="icon" href="/img/appelogo.png" type="image/apple_logo">
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="bg-white">
+    <!-- Navigation Bar -->
+    <nav
+      id="navbar"
+      class="bg-[#fffeff] absolute top-0 left-0 right-0 z-40 opacity-95 transition-transform duration-300"
+    >
+      <div
+        class="max-w-[980px] mx-auto flex items-center justify-between h-[44px] px-4 md:px-[22px]"
+      >
+        <!-- Apple Logo -->
+        <a href="index.html" class="nav-link">
+          <svg class="w-[16px] h-[44px]" viewBox="0 0 16 44" fill="#333232">
+            <path
+              d="m13.0729 17.6825a3.61 3.61 0 0 0 -1.7248 3.0365 3.5132 3.5132 0 0 0 2.1379 3.2223 8.394 8.394 0 0 1 -1.0948 2.2618c-.6816.9812-1.3943 1.9623-2.4787 1.9623s-1.3633-.63-2.613-.63c-1.2187 0-1.6525.6507-2.644.6507s-1.6834-.9089-2.4787-2.0243a9.7842 9.7842 0 0 1 -1.6628-5.2776c0-3.0984 2.014-4.7405 3.9969-4.7405 1.0535 0 1.9314.6919 2.5924.6919.63 0 1.6112-.7333 2.8092-.7333a3.7579 3.7579 0 0 1 3.1604 1.5802zm-3.7284-2.8918a3.5615 3.5615 0 0 0 .8469-2.22 1.5353 1.5353 0 0 0 -.031-.32 3.5686 3.5686 0 0 0 -2.3445 1.2084 3.4629 3.4629 0 0 0 -.8779 2.1585 1.419 1.419 0 0 0 .031.2892 1.19 1.19 0 0 0 .2169.0207 3.0935 3.0935 0 0 0 2.1586-1.1368z"
+            />
+          </svg>
+        </a>
+
+        <!-- Nav Links -->
+        <div class="hidden md:flex items-center gap-[32px] text-[12px]">
+          <a href="#" class="nav-link text-[#333333]">Store</a>
+          <a href="#" class="nav-link text-[#333333]">Mac</a>
+          <a href="#" class="nav-link text-[#333333]">iPad</a>
+          <a href="#" class="nav-link text-[#333333]">iPhone</a>
+          <a href="#" class="nav-link text-[#333333]">Watch</a>
+          <a href="#" class="nav-link text-[#333333]">Vision</a>
+          <a href="#" class="nav-link text-[#333333]">AirPods</a>
+          <a href="tv&home.html" class="nav-link text-[#333333]">TV & Home</a>
+          <a href="#" class="nav-link text-[#333333]">Entertainment</a>
+          <a href="#" class="nav-link text-[#333333]">Accessories</a>
+          <a href="support.html" class="nav-link text-[#333333]">Support</a>
+        </div>
+
+        <!-- Search and Bag Icons -->
+        <div class="flex items-center gap-[30px]">
+          <a href="#" class="nav-link">
+            <svg class="w-[15px] h-[44px]" viewBox="0 0 15 44" fill="#333232">
+              <path
+                d="M14.298,27.202l-3.87-3.87c0.701-0.929,1.122-2.081,1.122-3.332c0-3.06-2.489-5.55-5.55-5.55c-3.06,0-5.55,2.49-5.55,5.55 c0,3.061,2.49,5.55,5.55,5.55c1.251,0,2.403-0.421,3.332-1.122l3.87,3.87c0.151,0.151,0.35,0.228,0.548,0.228 s0.396-0.076,0.548-0.228C14.601,27.995,14.601,27.505,14.298,27.202z M1.55,20c0-2.454,1.997-4.45,4.45-4.45 c2.454,0,4.45,1.997,4.45,4.45S8.454,24.45,6,24.45C3.546,24.45,1.55,22.454,1.55,20z"
+              />
+            </svg>
+          </a>
+          <a href="#" class="nav-link">
+            <svg class="w-[14px] h-[44px]" viewBox="0 0 14 44" fill="#333232">
+              <path
+                d="m11.3535 16.0283h-1.0205a3.4229 3.4229 0 0 0 -3.333-2.9648 3.4229 3.4229 0 0 0 -3.333 2.9648h-1.02a2.1184 2.1184 0 0 0 -2.117 2.1162v7.7155a2.1186 2.1186 0 0 0 2.1162 2.1167h8.707a2.1186 2.1186 0 0 0 2.1168-2.1167v-7.7155a2.1184 2.1184 0 0 0 -2.1165-2.1162zm-4.3535-1.8652a2.3169 2.3169 0 0 1 2.2222 1.8652h-4.4444a2.3169 2.3169 0 0 1 2.2222-1.8652zm5.37 11.6969a1.0182 1.0182 0 0 1 -1.0166 1.0171h-8.7069a1.0182 1.0182 0 0 1 -1.0165-1.0171v-7.7155a1.0178 1.0178 0 0 1 1.0166-1.0166h8.707a1.0178 1.0178 0 0 1 1.0164 1.0166z"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="w-full">
+      <!-- Logo -->
+      <section class="mt-20 text-center px-4">
+        <img
+          src="./img/support-home-apple-logo-circle-blue.png"
+          alt="Apple Support Logo"
+          class="w-40 mx-auto mb-6"
+        />
+        <h1
+          class="text-[64px] md:text-6xl font-semibold tracking-tight text-black"
+        >
+          Apple Support
+        </h1>
+        <p class="text-2xl mt-6 text-gray-800">Need help? Start here.</p>
+      </section>
+
+      <!-- Product Categories -->
+      <section class="max-w-5xl mx-auto mt-14 px-4">
+        <div class="grid grid-cols-3 md:grid-cols-7 gap-8 text-center">
+          <a href="#" class="group flex flex-col items-center gap-4">
+            <img
+              src="./img/image-grid-iphone-nav_2x.png"
+              class="h-16 w-auto object-contain"
+              alt="iPhone"
+            />
+            <span class="group-hover:underline text-sm font-medium"
+              >iPhone</span
+            >
+          </a>
+          <a href="#" class="group flex flex-col items-center gap-4">
+            <img
+              src="./img/image-grid-mac-nav_2x.png"
+              class="h-16 w-auto object-contain"
+              alt="Mac"
+            />
+            <span class="group-hover:underline text-sm font-medium">Mac</span>
+          </a>
+          <a href="#" class="group flex flex-col items-center gap-4">
+            <img
+              src="./img/image-grid-ipad-tn_2x.png"
+              class="h-16 w-auto object-contain"
+              alt="iPad"
+            />
+            <span class="group-hover:underline text-sm font-medium">iPad</span>
+          </a>
+          <a href="#" class="group flex flex-col items-center gap-4">
+            <img
+              src="./img/image-grid-watch_2x.png"
+              class="h-16 w-auto object-contain"
+              alt="Watch"
+            />
+            <span class="group-hover:underline text-sm font-medium">Watch</span>
+          </a>
+          <a href="#" class="group flex flex-col items-center gap-4">
+            <img
+              src="./img/image-grid-apple-vision-pro_2x.png"
+              class="h-16 w-auto object-contain"
+              alt="Vision"
+            />
+            <span class="group-hover:underline text-sm font-medium"
+              >Vision</span
+            >
+          </a>
+          <a href="#" class="group flex flex-col items-center gap-4">
+            <img
+              src="./img/image-grid-airpods_2x.png"
+              class="h-16 w-auto object-contain"
+              alt="AirPods"
+            />
+            <span class="group-hover:underline text-sm font-medium"
+              >AirPods</span
+            >
+          </a>
+          <a href="#" class="group flex flex-col items-center gap-4">
+            <img
+              src="./img/image-grid-tv_2x.png"
+              class="h-16 w-auto object-contain"
+              alt="TV"
+            />
+            <span class="group-hover:underline text-sm font-medium">TV</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- Support Tools -->
+      <section class="max-w-5xl mx-auto mt-16 px-4">
+        <h2 class="text-3xl md:text-4xl font-semibold text-center mb-8 p-12">
+          Support Tools
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <a
+            href="#"
+            class="bg-[#f4f4f7] hover:bg-gray-100 rounded-2xl p-8 text-center transition-all duration-300 shadow-xl hover:scale-105"
+          >
+            <img
+              src="./img/icon_apple-account-password.svg"
+              class="h-16 w-16 mx-auto mb-4"
+              alt="Password"
+            />
+            <p class="text-blue-600 font-medium hover:underline">
+              Reset Apple Account password
+            </p>
+          </a>
+          <a
+            href="#"
+            class="bg-[#f4f4f7] hover:bg-gray-100 rounded-2xl p-8 text-center transition-all duration-300 shadow-xl hover:scale-105"
+          >
+            <img
+              src="./img/icon_applecare-and-warranty.svg"
+              class="h-16 w-16 mx-auto mb-4"
+              alt="Warranty"
+            />
+            <p class="text-blue-600 font-medium hover:underline">
+              Check warranty or AppleCare plan
+            </p>
+          </a>
+          <a
+            href="#"
+            class="bg-[#f4f4f7] hover:bg-gray-100 rounded-2xl p-8 text-center transition-all duration-300 shadow-xl hover:scale-105"
+          >
+            <img
+              src="./img/icon_purchase-history-card.svg"
+              class="h-16 w-16 mx-auto mb-4"
+              alt="Subscriptions"
+            />
+            <p class="text-blue-600 font-medium hover:underline">
+              Change a subscription
+            </p>
+          </a>
+        </div>
+      </section>
+
+      <!-- Search Bar -->
+      <section class="max-w-[980px] mx-auto mt-16 text-center px-4">
+        <h2 class="text-3xl md:text-4xl font-semibold mb-8 p-6">
+          Search for More Topics
+        </h2>
+        <div class="relative w-full md:w-2/3 lg:w-full mx-auto">
+          <input
+            type="text"
+            placeholder="Search Support"
+            class="w-full h-14 pl-12 pr-4 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 text-lg placeholder-gray-500"
+          />
+          <svg
+            class="absolute left-4 top-4 h-6 w-6 text-gray-400"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+            ></path>
+          </svg>
+        </div>
+      </section>
+
+      <!-- AppleCare -->
+      <section class="bg-[#f4f4f7] py-6 mt-16">
+        <div class="max-w-5xl mx-auto px-4 space-y-6">
+          <div
+            class="bg-white rounded-2xl overflow-hidden shadow-sm flex flex-col md:flex-row items-center"
+          >
+            <div class="md:w-1/2 flex justify-center bg-white">
+              <img
+                src="./img/tile-side-applecare.image.large_2x.png"
+                class="max-h-[490px] object-contain"
+                alt="AppleCare"
+              />
+            </div>
+            <div class="p-10 md:w-1/2">
+              <h2 class="text-[40px] font-semibold mb-4">
+                Handled with AppleCare
+              </h2>
+              <p class="text-gray-700 mb-4 text-lg">
+                Every AppleCare plan provides one-stop service for your Apple
+                products, with quick and easy repairs for accidents like drops
+                and spills. You’re also covered if your iPhone, iPad, or Apple
+                Watch is lost or stolen.
+              </p>
+              <a
+                href="#"
+                class="text-blue-600 hover:underline flex items-center"
+              >
+                Learn more
+                <svg
+                  class="w-4 h-5 text-[#0166cc]"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M9 5l7 7-7 7"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-2xl overflow-hidden shadow-sm flex flex-col md:flex-row items-center"
+          >
+            <div class="p-10 md:w-1/2">
+              <h2 class="text-[40px] font-semibold mb-4">
+                Apple Repair and Service
+              </h2>
+              <p class="text-gray-700 mb-4 text-lg">
+                We can help you find an Apple-certified repair, performed by
+                trusted experts who use genuine Apple parts.
+              </p>
+              <a
+                href="#"
+                class="text-blue-600 hover:underline flex items-center"
+              >
+                Start a repair
+                <svg
+                  class="w-4 h-5 text-[#0166cc]"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M9 5l7 7-7 7"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+            <div class="md:w-1/2 flex justify-center bg-white">
+              <img
+                src="./img/tile-feature-repair-and-service.image.large_2x.png"
+                class="max-h-[490px] object-contain"
+                alt="Repair"
+              />
+            </div>
+          </div>
+
+          <div class="pt-10">
+            <h2 class="text-[40px] font-semibold text-center mb-10">
+              More to Explore
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+              <div class="flex flex-col items-center">
+                <img
+                  src="./img/content-block-apple-support.png"
+                  class="h-48 object-contain mb-4"
+                />
+                <h3 class="text-[24px] font-semibold">Apple Support App</h3>
+                <p class="text-[17px] text-gray-600 mt-2 px-4">
+                  Get help for all of your Apple products in one place, or
+                  connect with an expert.
+                </p>
+                <a href="#" class="text-[#0066cd] mt-3 hover:underline"
+                  >Download ↗</a
+                >
+              </div>
+              <div class="flex flex-col items-center">
+                <img
+                  src="./img/tile-feature-round-youtube.png"
+                  class="h-48 object-contain mb-4"
+                />
+                <h3 class="text-[24px] font-semibold">
+                  Apple Support on YouTube
+                </h3>
+                <p class="text-[17px] text-gray-600 mt-2 px-4">
+                  Watch videos to get the most out of the latest features,
+                  devices, and services.
+                </p>
+                <a
+                  href="#"
+                  class="text-[#0066cd] mt-3 hover:underline flex items-center justify-center"
+                >
+                  Visit Apple Support on YouTube
+                  <svg
+                    class="w-4 h-5 text-[#0166cc] ml-1"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.5"
+                      d="M9 5l7 7-7 7"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+              <div class="flex flex-col items-center">
+                <img
+                  src="./img/tile-feature-round-todayatapple.png"
+                  class="h-48 object-contain mb-4"
+                />
+                <h3 class="text-[24px] font-semibold">Today at Apple</h3>
+                <p class="text-[17px] text-gray-600 mt-2 px-4">
+                  Learn, create, and be inspired in hands-on sessions at your
+                  Apple Store.
+                </p>
+                <a
+                  href="#"
+                  class="text-[#0066cd] mt-3 hover:underline flex items-center justify-center"
+                >
+                  Sign up
+                  <svg
+                    class="w-4 h-5 text-[#0166cc] ml-1"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.5"
+                      d="M9 5l7 7-7 7"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-2xl px-[82px] py-[40px] shadow-sm text-center max-w-full !mt-[90px]"
+          >
+            <h2 class="text-[24px] font-semibold mb-4">
+              Designing for longevity
+            </h2>
+            <p class="text-[1d1d1f] leading-relaxed mb-4">
+              At Apple, we are always working to create the best experience for
+              our customers, which is why we design products that last.
+              Designing for longevity is a company-wide effort, informing our
+              earliest decisions long before the first prototype is built and
+              guided by historical customer-use data and predictions on future
+              usage. It requires striking a balance between durability and
+              repairability while not compromising on safety, security, and
+              privacy.
+            </p>
+            <p class="text-[1d1d1f] text-[17px]">
+              Learn more about Apple's approach to designing for longevity,
+              which includes access to safe and reliable repairs.
+              <a href="#" class="text-[#0066cc] hover:underline">View (PDF)</a>
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+            <div
+              class="md:col-span-8 bg-white rounded-2xl p-10 shadow-sm flex flex-col justify-between"
+            >
+              <div>
+                <h3 class="text-[24px] font-semibold mb-4">
+                  Beware of counterfeit parts
+                </h3>
+                <p class="text-gray-700 text-base leading-relaxed">
+                  Some counterfeit and third party power adapters and batteries
+                  may not be designed properly and could result in safety
+                  issues. To ensure you receive a genuine Apple battery during a
+                  battery replacement, we recommend visiting an
+                  <a href="#" class="text-blue-600 hover:underline"
+                    >Apple Store</a
+                  >
+                  or an
+                  <a href="#" class="text-blue-600 hover:underline"
+                    >Apple Authorized Service Provider</a
+                  >
+                  . If you need a replacement adapter to charge your Apple
+                  device, we recommend getting an Apple power adapter.
+                </p>
+                <p class="text-gray-700 text-base leading-relaxed mt-4">
+                  Also non-genuine replacement displays may have compromised
+                  visual quality and may fail to work correctly. Apple-certified
+                  screen repairs are performed by trusted experts who use
+                  genuine Apple parts.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="md:col-span-4 bg-white rounded-2xl px-6 pb-10 shadow-sm flex flex-col items-start justify-center"
+            >
+              <img
+                src="./img/nav-icon-giftcard_2x.svg"
+                class="h-[60px] w-[60px] mb-4"
+                alt="Gift Card"
+              />
+              <h3 class="text-[24px] font-semibold mb-2">
+                Be aware of gift card scams
+              </h3>
+              <p class="text-[17px] text-gray-600 mb-4">
+                Be aware of scams involving Apple Gift Cards, App Store & iTunes
+                Gift Cards, and Apple Store Gift Cards.
+              </p>
+              <a
+                href="#"
+                class="text-[#0066cd] hover:underline flex items-center justify-center"
+              >
+                Learn more
+                <svg
+                  class="w-4 h-5 text-[#0166cc] ml-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M9 5l7 7-7 7"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="max-w-5xl mx-auto py-12 px-4">
+        <h2 class="text-2xl font-semibold mb-4">Apple Service Programs</h2>
+        <ul class="space-y-3">
+          <li>
+            <a href="#" class="text-blue-600 hover:underline"
+              >Mac mini Service Program for No Power Issue</a
+            >
+          </li>
+          <li>
+            <a href="#" class="text-blue-600 hover:underline"
+              >iPhone 14 Plus Service Program for Rear Camera Issue</a
+            >
+          </li>
+          <li>
+            <a href="#" class="text-blue-600 hover:underline"
+              >15-inch MacBook Pro Battery Recall Program</a
+            >
+          </li>
+          <li>
+            <a href="#" class="text-blue-600 hover:underline flex items-center">
+              See all programs
+              <svg
+                class="w-4 h-5 text-[#0166cc] ml-1"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M9 5l7 7-7 7"
+                ></path>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer
+      class="bg-gray-100 text-xs text-gray-500 py-8 border-t border-gray-200"
+    >
+      <div class="max-w-5xl mx-auto px-4">
+        <div class="flex items-center space-x-2 mb-6 text-gray-600">
+          <svg class="w-[14px] h-[44px]" viewBox="0 0 14 44" fill="#333232">
+            <path
+              d="m13.0729 17.6825a3.61 3.61 0 0 0 -1.7248 3.0365 3.5132 3.5132 0 0 0 2.1379 3.2223 8.394 8.394 0 0 1 -1.0948 2.2618c-.6816.9812-1.3943 1.9623-2.4787 1.9623s-1.3633-.63-2.613-.63c-1.2187 0-1.6525.6507-2.644.6507s-1.6834-.9089-2.4787-2.0243a9.7842 9.7842 0 0 1 -1.6628-5.2776c0-3.0984 2.014-4.7405 3.9969-4.7405 1.0535 0 1.9314.6919 2.5924.6919.63 0 1.6112-.7333 2.8092-.7333a3.7579 3.7579 0 0 1 3.1604 1.5802zm-3.7284-2.8918a3.5615 3.5615 0 0 0 .8469-2.22 1.5353 1.5353 0 0 0 -.031-.32 3.5686 3.5686 0 0 0 -2.3445 1.2084 3.4629 3.4629 0 0 0 -.8779 2.1585 1.419 1.419 0 0 0 .031.2892 1.19 1.19 0 0 0 .2169.0207 3.0935 3.0935 0 0 0 2.1586-1.1368z"
+            />
+          </svg>
+          <svg
+            class="w-5 h-5 text-[#d2d2d7]"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              d="M9 5l7 7-7 7"
+            ></path>
+          </svg>
+          <span>Support</span>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+          <div>
+            <h3 class="font-semibold text-gray-900 mb-2">Product Support</h3>
+            <ul class="space-y-1.5">
+              <li>
+                <a href="#" class="hover:underline hover:text-gray-900"
+                  >iPhone</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:underline hover:text-gray-900">Mac</a>
+              </li>
+              <li>
+                <a href="#" class="hover:underline hover:text-gray-900">iPad</a>
+              </li>
+              <li>
+                <a href="#" class="hover:underline hover:text-gray-900"
+                  >Watch</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:underline hover:text-gray-900"
+                  >Apple Vision Pro</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:underline hover:text-gray-900"
+                  >AirPods</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:underline hover:text-gray-900">TV</a>
+              </li>
+              <li>
+                <a href="#" class="hover:underline hover:text-gray-900"
+                  >Support Site Map</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-semibold text-gray-900 mb-2">Service and Repair</h3>
+            <ul class="space-y-1.5">
+              <li>
+                <a href="#" class="hover:underline hover:text-gray-900"
+                  >Apple Repair Options</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:underline hover:text-gray-900"
+                  >Service and Repair Information</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:underline hover:text-gray-900"
+                  >AppleCare Products</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:underline hover:text-gray-900"
+                  >Hardware Warranties</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:underline hover:text-gray-900"
+                  >Software License Agreements</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:underline hover:text-gray-900"
+                  >Complimentary Support</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-semibold text-gray-900 mb-2">Resources</h3>
+            <ul class="space-y-1.5">
+              <li>
+                <a href="#" class="hover:underline hover:text-gray-900"
+                  >My Support</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:underline hover:text-gray-900"
+                  >Product Documentation</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:underline hover:text-gray-900"
+                  >Apple Support Videos</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:underline hover:text-gray-900"
+                  >Accessibility</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-semibold text-gray-900 mb-2">Connect</h3>
+            <ul class="space-y-1.5">
+              <li>
+                <a href="#" class="hover:underline hover:text-gray-900"
+                  >Contact Us</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:underline hover:text-gray-900"
+                  >Support app</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:underline hover:text-gray-900"
+                  >Apple Communities</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:underline hover:text-gray-900"
+                  >@AppleSupport</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-gray-300 pt-4 flex flex-col md:flex-row justify-between items-center"
+        >
+          <p>Copyright © 2025 Apple Inc. All rights reserved.</p>
+          <div class="flex flex-wrap justify-center space-x-4 mt-2 md:mt-0">
+            <a href="#" class="hover:underline hover:text-gray-900"
+              >Privacy Policy</a
+            >
+            <a
+              href="#"
+              class="border-l border-gray-300 pl-4 hover:underline hover:text-gray-900"
+              >Terms of Use</a
+            >
+            <a
+              href="#"
+              class="border-l border-gray-300 pl-4 hover:underline hover:text-gray-900"
+              >Sales and Refunds</a
+            >
+            <a
+              href="#"
+              class="border-l border-gray-300 pl-4 hover:underline hover:text-gray-900"
+              >Legal</a
+            >
+            <a
+              href="#"
+              class="border-l border-gray-300 pl-4 hover:underline hover:text-gray-900"
+              >Site Map</a
+            >
+          </div>
+          <a href="#" class="mt-2 md:mt-0 hover:underline hover:text-gray-900"
+            >United States</a
+          >
+        </div>
+      </div>
+    </footer>
+    <script>
+      let lastScrollTop = 0;
+      const navbar = document.getElementById("navbar");
+
+      window.addEventListener("scroll", function () {
+        const scrollTop =
+          window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollTop > lastScrollTop && scrollTop > 100) {
+          // Scrolling down - hide navbar
+          navbar.style.transform = "translateY(-100%)";
+        } else {
+          // Scrolling up - show navbar
+          navbar.style.transform = "translateY(0)";
+        }
+
+        lastScrollTop = scrollTop;
+      });
+    </script>
+  </body>
+</html>

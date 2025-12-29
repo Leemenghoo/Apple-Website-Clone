@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500;600;700&display=swap');
+
+* {
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 16px;
+    width: max-content;
+    transition: transform 0.5s ease-out;
+}
+
+.no-transition {
+    transition: none !important;
+}
+
+.big-item .text-content {
+    opacity: 0.36;
+    transition: opacity 0.3s;
+}
+
+.big-item.active .text-content {
+    opacity: 1;
+}
+
+.more-item .text-content {
+    opacity: 0.36;
+    transition: opacity 0.3s;
+}
+
+.more-item.active .text-content {
+    opacity: 1;
+}
+
+body:focus-visible {
+    outline: none;
+}
+
+/* Navigation-Bar */
+
+.dropdown-content {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.4s ease-out;
+}
+
+.dropdown-content.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.hide-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.nav-item {
+    padding: 0 4px;
+}
