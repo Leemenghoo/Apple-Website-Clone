@@ -19,68 +19,154 @@ const LOGO_FITNESS = `
 
 // main carousel data - big items
 const bigData = [
-    { title: "Now streaming on Apple TV.", genre: "Action •", img: "/img/1376x736sr.jpg" },
-    { title: "Happiness is a state of mind.", genre: "Drama •", img: "/img/1376x736sr (1).jpg" },
-    { title: "Happiness is the holidays.", genre: "Holiday •", img: "/img/1376x736sr (2).jpg" },
-    { title: "Start your holiday on a high note.", genre: "Comedy •", img: "/img/1376x736sr (3).jpg" },
-    { title: "Curiosity kills.", genre: "Thriller •", img: "/img/1376x736sr (4).jpg" },
-    { title: "Thr truth is the top story.", genre: "Drama •", img: "/img/1376x736sr (5).jpg" },
-    { title: "Same family. New plan.", genre: "Comedy •", img: "/img/1376x736sr (6).jpg" },
-    { title: "Tiny paws. Big adventure", genre: "Documentary •", img: "/img/1376x736sr (7).jpg" },
-    { title: "600,000 square mitles. Nowhere to hide.", genre: "Action •", img: "/img/1376x736sr (8).jpg" }
+  {
+    title: "Now streaming on Apple TV.",
+    genre: "Action •",
+    img: "/img/1376x736sr.jpg",
+  },
+  {
+    title: "Happiness is a state of mind.",
+    genre: "Drama •",
+    img: "/img/1376x736sr (1).jpg",
+  },
+  {
+    title: "Happiness is the holidays.",
+    genre: "Holiday •",
+    img: "/img/1376x736sr (2).jpg",
+  },
+  {
+    title: "Start your holiday on a high note.",
+    genre: "Comedy •",
+    img: "/img/1376x736sr (3).jpg",
+  },
+  {
+    title: "Curiosity kills.",
+    genre: "Thriller •",
+    img: "/img/1376x736sr (4).jpg",
+  },
+  {
+    title: "Thr truth is the top story.",
+    genre: "Drama •",
+    img: "/img/1376x736sr (5).jpg",
+  },
+  {
+    title: "Same family. New plan.",
+    genre: "Comedy •",
+    img: "/img/1376x736sr (6).jpg",
+  },
+  {
+    title: "Tiny paws. Big adventure",
+    genre: "Documentary •",
+    img: "/img/1376x736sr (7).jpg",
+  },
+  {
+    title: "600,000 square mitles. Nowhere to hide.",
+    genre: "Action •",
+    img: "/img/1376x736sr (8).jpg",
+  },
 ];
 
 const smallData = [
-    { title: "NBA 2K26 Arcade Edition", btn: "Play now", img: "/img/834x468.jpg", logo: LOGO_ARCADE },
-    { title: "Meditation with JoAnna", btn: "Watch now", img: "/img/834x468 (1).jpg", logo: LOGO_FITNESS },
-    { title: "Sabrina Carpenter & Zane Lowe", btn: "Listen now", img: "/img/392x392sr.jpg", logo: LOGO_MUSIC, layout: "music", bgColor: "#000000" },
-    { title: "Hello Kitty Island Adventure", btn: "Play now", img: "/img/834x468 (2).jpg", logo: LOGO_ARCADE },
-    { title: "Calm Meditations with Visualization", btn: "Watch now", img: "/img/834x468 (3).jpg", logo: LOGO_FITNESS },
-    { title: "A-List Pop", btn: "Listen now", img: "/img/392x392SC.DN01.jpg", logo: LOGO_MUSIC, layout: "music", bgColor: "#0c38b5" },
-    { title: "Angry Birds Bounce", btn: "Play now", img: "/img/834x468 (4).jpg", logo: LOGO_ARCADE },
-    { title: "HIIT with Bakari", btn: "Watch now", img: "/img/834x468 (5).jpg", logo: LOGO_FITNESS },
-    { title: "New Music Daily", btn: "Listen now", img: "/img/392x392SC.DN02.jpg", logo: LOGO_MUSIC, layout: "music", bgColor: "#691e9f" }
+  {
+    title: "NBA 2K26 Arcade Edition",
+    btn: "Play now",
+    img: "/img/834x468.jpg",
+    logo: LOGO_ARCADE,
+  },
+  {
+    title: "Meditation with JoAnna",
+    btn: "Watch now",
+    img: "/img/834x468 (1).jpg",
+    logo: LOGO_FITNESS,
+  },
+  {
+    title: "Sabrina Carpenter & Zane Lowe",
+    btn: "Listen now",
+    img: "/img/392x392sr.jpg",
+    logo: LOGO_MUSIC,
+    layout: "music",
+    bgColor: "#000000",
+  },
+  {
+    title: "Hello Kitty Island Adventure",
+    btn: "Play now",
+    img: "/img/834x468 (2).jpg",
+    logo: LOGO_ARCADE,
+  },
+  {
+    title: "Calm Meditations with Visualization",
+    btn: "Watch now",
+    img: "/img/834x468 (3).jpg",
+    logo: LOGO_FITNESS,
+  },
+  {
+    title: "A-List Pop",
+    btn: "Listen now",
+    img: "/img/392x392SC.DN01.jpg",
+    logo: LOGO_MUSIC,
+    layout: "music",
+    bgColor: "#0c38b5",
+  },
+  {
+    title: "Angry Birds Bounce",
+    btn: "Play now",
+    img: "/img/834x468 (4).jpg",
+    logo: LOGO_ARCADE,
+  },
+  {
+    title: "HIIT with Bakari",
+    btn: "Watch now",
+    img: "/img/834x468 (5).jpg",
+    logo: LOGO_FITNESS,
+  },
+  {
+    title: "New Music Daily",
+    btn: "Listen now",
+    img: "/img/392x392SC.DN02.jpg",
+    logo: LOGO_MUSIC,
+    layout: "music",
+    bgColor: "#691e9f",
+  },
 ];
 
 // get containers for the carousels
-const bigTrackContainer = document.getElementById('bigTrack').parentElement;
-const smallTrackContainer = document.getElementById('smallTrack').parentElement;
-const moreAppleTrackContainer = document.getElementById('moreAppleTrack').parentElement;
+const bigTrackContainer = document.getElementById("bigTrack").parentElement;
+const smallTrackContainer = document.getElementById("smallTrack").parentElement;
+const moreAppleTrackContainer =
+  document.getElementById("moreAppleTrack").parentElement;
 
 // figure out what size to use based on screen width
 function getResponsiveConfig() {
-    const w = window.innerWidth;
+  const w = window.innerWidth;
 
-    if (w <= 480) {
-        return {
-            gap: 16,
-            bigWidth: 275,
-            bigHeight: 496,
-            smallWidth: 188,
-            smallHeight: 254,
-            clones: 3
-        };
-    }
-    else if (w <= 1280) {
-        return {
-            gap: 16,
-            bigWidth: 930,
-            bigHeight: 523,
-            smallWidth: 417,
-            smallHeight: 234,
-            clones: 3
-        };
-    }
-    else {
-        return {
-            gap: 16,
-            bigWidth: 1250,
-            bigHeight: 668,
-            smallWidth: 470,
-            smallHeight: 260,
-            clones: 3
-        };
-    }
+  if (w <= 480) {
+    return {
+      gap: 16,
+      bigWidth: 275,
+      bigHeight: 496,
+      smallWidth: 188,
+      smallHeight: 254,
+      clones: 3,
+    };
+  } else if (w <= 1280) {
+    return {
+      gap: 16,
+      bigWidth: 930,
+      bigHeight: 523,
+      smallWidth: 417,
+      smallHeight: 234,
+      clones: 3,
+    };
+  } else {
+    return {
+      gap: 16,
+      bigWidth: 1250,
+      bigHeight: 668,
+      smallWidth: 470,
+      smallHeight: 260,
+      clones: 3,
+    };
+  }
 }
 
 let CONFIG = getResponsiveConfig();
@@ -89,26 +175,29 @@ let totalItems = bigData.length;
 let isJumping = false;
 
 // grab the track elements
-const bigTrack = document.getElementById('bigTrack');
-const smallTrack = document.getElementById('smallTrack');
-const dotsContainer = document.getElementById('dotsContainer');
+const bigTrack = document.getElementById("bigTrack");
+const smallTrack = document.getElementById("smallTrack");
+const dotsContainer = document.getElementById("dotsContainer");
 
 // set container heights based on screen size
 function applyLayout() {
-    CONFIG = getResponsiveConfig();
-    bigTrackContainer.style.height = `${CONFIG.bigHeight}px`;
-    smallTrackContainer.style.height = `${CONFIG.smallHeight}px`;
-    moreAppleTrackContainer.style.height = `${CONFIG.bigHeight}px`;
+  CONFIG = getResponsiveConfig();
+  bigTrackContainer.style.height = `${CONFIG.bigHeight}px`;
+  smallTrackContainer.style.height = `${CONFIG.smallHeight}px`;
+  moreAppleTrackContainer.style.height = `${CONFIG.bigHeight}px`;
 }
 
 // build the html for carousel items (with clones for infinite scroll)
 function render() {
-    const indicesToRender = [];
-    for (let i = totalItems - CONFIG.clones; i < totalItems; i++) indicesToRender.push(i);
-    for (let i = 0; i < totalItems; i++) indicesToRender.push(i);
-    for (let i = 0; i < CONFIG.clones; i++) indicesToRender.push(i);
+  const indicesToRender = [];
+  for (let i = totalItems - CONFIG.clones; i < totalItems; i++)
+    indicesToRender.push(i);
+  for (let i = 0; i < totalItems; i++) indicesToRender.push(i);
+  for (let i = 0; i < CONFIG.clones; i++) indicesToRender.push(i);
 
-    bigTrack.innerHTML = indicesToRender.map((dataIndex) => `
+  bigTrack.innerHTML = indicesToRender
+    .map(
+      (dataIndex) => `
     <li class="big-item shrink-0 relative overflow-hidden group cursor-pointer" 
         style="width: ${CONFIG.bigWidth}px; height: 100%;"
         onclick="clickedItem(${dataIndex})">
@@ -118,12 +207,15 @@ function render() {
          <span class="text-xl font-bold">${bigData[dataIndex].genre}</span> ${bigData[dataIndex].title}
       </div>
     </li>
-  `).join('');
+  `
+    )
+    .join("");
 
-    smallTrack.innerHTML = indicesToRender.map((dataIndex) => {
-        const item = smallData[dataIndex];
-        if (item.layout === 'music') {
-            return `
+  smallTrack.innerHTML = indicesToRender
+    .map((dataIndex) => {
+      const item = smallData[dataIndex];
+      if (item.layout === "music") {
+        return `
         <li class="shrink-0 relative overflow-hidden cursor-pointer" style="width: ${CONFIG.smallWidth}px; height: 100%;" onclick="clickedItem(${dataIndex})">
             <div class="w-full h-full relative overflow-hidden" style="background-color: ${item.bgColor}">
                 <img src="${item.img}" class="absolute left-4 top-4 bottom-4 w-auto h-[calc(100%-32px)] rounded-md shadow-md object-cover select-none" draggable="false">
@@ -136,8 +228,8 @@ function render() {
                 </div>
             </div>
         </li>`;
-        } else {
-            return `
+      } else {
+        return `
         <li class="shrink-0 relative overflow-hidden cursor-pointer" style="width: ${CONFIG.smallWidth}px; height: 100%;" onclick="clickedItem(${dataIndex})">
           <img src="${item.img}" class="w-full h-full object-cover select-none" draggable="false">
           <div class="absolute top-4 right-4 pointer-events-none drop-shadow-md">${item.logo}</div>
@@ -146,115 +238,176 @@ function render() {
              <span class="bg-white text-black text-xs py-[8px] px-[15px] rounded-full">${item.btn}</span>
           </div>
         </li>`;
-        }
-    }).join('');
+      }
+    })
+    .join("");
 
-    // navigation dots
-    dotsContainer.innerHTML = bigData.map((_, idx) => `
+  // navigation dots
+  dotsContainer.innerHTML = bigData
+    .map(
+      (_, idx) => `
     <li onclick="clickedItem(${idx})" class="dot w-2 h-2 rounded-full bg-gray-400 cursor-pointer transition-all duration-300 hover:bg-black" data-index="${idx}"></li>
-  `).join('');
+  `
+    )
+    .join("");
 }
 
 // move the carousel to the right position
 function updateCarousel(enableAnimation = true) {
-    if (enableAnimation) {
-        bigTrack.classList.remove('no-transition');
-        smallTrack.classList.remove('no-transition');
+  if (enableAnimation) {
+    bigTrack.classList.remove("no-transition");
+    smallTrack.classList.remove("no-transition");
+  } else {
+    bigTrack.classList.add("no-transition");
+    smallTrack.classList.add("no-transition");
+  }
+
+  const visualIndex = currentIndex + CONFIG.clones;
+  const screenCenter = window.innerWidth / 2;
+
+  const bigOffset = visualIndex * (CONFIG.bigWidth + CONFIG.gap);
+  const bigCenterFix = screenCenter - CONFIG.bigWidth / 2;
+  bigTrack.style.transform = `translateX(${-(bigOffset - bigCenterFix)}px)`;
+
+  const smallOffset = visualIndex * (CONFIG.smallWidth + CONFIG.gap);
+  const smallCenterFix = screenCenter - CONFIG.smallWidth / 2;
+  smallTrack.style.transform = `translateX(${-(
+    smallOffset - smallCenterFix
+  )}px)`;
+
+  document.querySelectorAll(".big-item").forEach((item, idx) => {
+    if (idx === visualIndex) item.classList.add("active");
+    else item.classList.remove("active");
+  });
+
+  document.querySelectorAll(".dot").forEach((dot, idx) => {
+    if (idx === currentIndex) {
+      dot.style.width = "32px";
+      dot.style.backgroundColor = "black";
     } else {
-        bigTrack.classList.add('no-transition');
-        smallTrack.classList.add('no-transition');
+      dot.style.width = "8px";
+      dot.style.backgroundColor = "#9ca3af";
     }
-
-    const visualIndex = currentIndex + CONFIG.clones;
-    const screenCenter = window.innerWidth / 2;
-
-    const bigOffset = (visualIndex * (CONFIG.bigWidth + CONFIG.gap));
-    const bigCenterFix = (screenCenter - (CONFIG.bigWidth / 2));
-    bigTrack.style.transform = `translateX(${-(bigOffset - bigCenterFix)}px)`;
-
-    const smallOffset = (visualIndex * (CONFIG.smallWidth + CONFIG.gap));
-    const smallCenterFix = (screenCenter - (CONFIG.smallWidth / 2));
-    smallTrack.style.transform = `translateX(${-(smallOffset - smallCenterFix)}px)`;
-
-    document.querySelectorAll('.big-item').forEach((item, idx) => {
-        if (idx === visualIndex) item.classList.add('active');
-        else item.classList.remove('active');
-    });
-
-    document.querySelectorAll('.dot').forEach((dot, idx) => {
-        if (idx === currentIndex) {
-            dot.style.width = "32px";
-            dot.style.backgroundColor = "black";
-        } else {
-            dot.style.width = "8px";
-            dot.style.backgroundColor = "#9ca3af";
-        }
-    });
+  });
 }
 
 function clickedItem(index) {
-    if (isJumping) return;
-    currentIndex = index;
-    updateCarousel(true);
+  if (isJumping) return;
+  currentIndex = index;
+  updateCarousel(true);
 }
 
 // handle mouse wheel scrolling
 let isScrolling = false;
 function handleWheel(e) {
-    if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) {
-        e.preventDefault();
-        if (isScrolling) return;
-        if (e.deltaX > 20) { goNext(); } else if (e.deltaX < -20) { goPrev(); }
+  if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) {
+    e.preventDefault();
+    if (isScrolling) return;
+    if (e.deltaX > 20) {
+      goNext();
+    } else if (e.deltaX < -20) {
+      goPrev();
     }
+  }
 }
-function goNext() { isScrolling = true; currentIndex++; updateCarousel(true); setTimeout(() => isScrolling = false, 600); }
-function goPrev() { isScrolling = true; currentIndex--; updateCarousel(true); setTimeout(() => isScrolling = false, 600); }
+function goNext() {
+  isScrolling = true;
+  currentIndex++;
+  updateCarousel(true);
+  setTimeout(() => (isScrolling = false), 600);
+}
+function goPrev() {
+  isScrolling = true;
+  currentIndex--;
+  updateCarousel(true);
+  setTimeout(() => (isScrolling = false), 600);
+}
 
-bigTrack.addEventListener('wheel', handleWheel, { passive: false });
-smallTrack.addEventListener('wheel', handleWheel, { passive: false });
+bigTrack.addEventListener("wheel", handleWheel, { passive: false });
+smallTrack.addEventListener("wheel", handleWheel, { passive: false });
 
 // reset to beginning/end when we hit the clones
-bigTrack.addEventListener('transitionend', () => {
-    if (currentIndex >= totalItems) { currentIndex = 0; updateCarousel(false); }
-    else if (currentIndex < 0) { currentIndex = totalItems - 1; updateCarousel(false); }
+bigTrack.addEventListener("transitionend", () => {
+  if (currentIndex >= totalItems) {
+    currentIndex = 0;
+    updateCarousel(false);
+  } else if (currentIndex < 0) {
+    currentIndex = totalItems - 1;
+    updateCarousel(false);
+  }
 });
 
 // second carousel data - videos
 const moreAppleData = [
-    { title: "Accessbillity", subtitle: "Design for Every Student •", video: "/mp4/xlarge.mp4", href: "#" },
-    { title: "Shot on iPhone 17 Pro", subtitle: "A Critter Carol •", video: "/mp4/xlarge (1).mp4", href: "#" },
-    { title: "Apple at Work", subtitle: "The Underdogs: Blue Screen of Death •", video: "/mp4/xlarge (2).mp4", href: "#" },
-    { title: "Shot on iPhone 17 Pro", subtitle: "Jackson Wang: Let Loose •", video: "/mp4/xlarge (3).mp4", href: "#" },
-    { title: "Apple Watch", subtitle: "Dear Apple •", video: "/mp4/xlarge (4).mp4", href: "#" },
-    { title: "Accessibility", subtitle: "No Frame Missed •", video: "/mp4/xlarge (5).mp4", href: "#" },
+  {
+    title: "Accessbillity",
+    subtitle: "Design for Every Student •",
+    video: "/mp4/xlarge.mp4",
+    href: "#",
+  },
+  {
+    title: "Shot on iPhone 17 Pro",
+    subtitle: "A Critter Carol •",
+    video: "/mp4/xlarge (1).mp4",
+    href: "#",
+  },
+  {
+    title: "Apple at Work",
+    subtitle: "The Underdogs: Blue Screen of Death •",
+    video: "/mp4/xlarge (2).mp4",
+    href: "#",
+  },
+  {
+    title: "Shot on iPhone 17 Pro",
+    subtitle: "Jackson Wang: Let Loose •",
+    video: "/mp4/xlarge (3).mp4",
+    href: "#",
+  },
+  {
+    title: "Apple Watch",
+    subtitle: "Dear Apple •",
+    video: "/mp4/xlarge (4).mp4",
+    href: "#",
+  },
+  {
+    title: "Accessibility",
+    subtitle: "No Frame Missed •",
+    video: "/mp4/xlarge (5).mp4",
+    href: "#",
+  },
 ];
 
 // state for second carousel
 let moreIndex = 0;
 const moreTotal = moreAppleData.length;
-const moreTrack = document.getElementById('moreAppleTrack');
-const moreDots = document.getElementById('moreAppleDots');
+const moreTrack = document.getElementById("moreAppleTrack");
+const moreDots = document.getElementById("moreAppleDots");
 
 // build html for second carousel
 function renderMoreApple() {
-    const indices = [];
-    for (let i = moreTotal - CONFIG.clones; i < moreTotal; i++) indices.push(i);
-    for (let i = 0; i < moreTotal; i++) indices.push(i);
-    for (let i = 0; i < CONFIG.clones; i++) indices.push(i);
+  const indices = [];
+  for (let i = moreTotal - CONFIG.clones; i < moreTotal; i++) indices.push(i);
+  for (let i = 0; i < moreTotal; i++) indices.push(i);
+  for (let i = 0; i < CONFIG.clones; i++) indices.push(i);
 
-    moreTrack.innerHTML = indices.map((dataIndex) => {
-        const item = moreAppleData[dataIndex];
+  moreTrack.innerHTML = indices
+    .map((dataIndex) => {
+      const item = moreAppleData[dataIndex];
 
-        const mediaContent = item.video
-            ? `<video src="${item.video}" class="w-full h-full object-cover select-none" muted playsinline></video>`
-            : `<img src="${item.img || ''}" class="w-full h-full object-cover select-none" draggable="false">`;
+      const mediaContent = item.video
+        ? `<video src="${item.video}" class="w-full h-full object-cover select-none" muted playsinline></video>`
+        : `<img src="${
+            item.img || ""
+          }" class="w-full h-full object-cover select-none" draggable="false">`;
 
-        return `
+      return `
     <li class="more-item shrink-0 relative overflow-hidden group cursor-pointer" 
         style="width: ${CONFIG.bigWidth}px; height: 100%;"
         onclick="clickMoreItem(${dataIndex})">
       
-      <a href="${item.href || '#'}" class="block w-full h-full relative" onclick="if(moreIndex !== ${dataIndex}) { event.preventDefault(); }">
+      <a href="${
+        item.href || "#"
+      }" class="block w-full h-full relative" onclick="if(moreIndex !== ${dataIndex}) { event.preventDefault(); }">
         ${mediaContent}
 
         <div class="text-content absolute bottom-0 w-full p-8 text-white bg-gradient-to-t from-black/80 to-transparent pointer-events-none">
@@ -263,103 +416,129 @@ function renderMoreApple() {
         </div>
       </a>
     </li>
-  `}).join('');
+  `;
+    })
+    .join("");
 
-    moreDots.innerHTML = moreAppleData.map((_, idx) => `
+  moreDots.innerHTML = moreAppleData
+    .map(
+      (_, idx) => `
     <li onclick="clickMoreItem(${idx})" 
         class="more-dot w-2 h-2 rounded-full bg-gray-500 cursor-pointer transition-all duration-300 hover:bg-white"
         data-index="${idx}">
     </li>
-  `).join('');
+  `
+    )
+    .join("");
 }
 
 // D. MOVEMENT
 function updateMoreCarousel(enableAnimation = true) {
-    if (enableAnimation) moreTrack.classList.remove('no-transition');
-    else moreTrack.classList.add('no-transition');
+  if (enableAnimation) moreTrack.classList.remove("no-transition");
+  else moreTrack.classList.add("no-transition");
 
-    const visualIndex = moreIndex + CONFIG.clones;
-    const screenCenter = window.innerWidth / 2;
-    const offset = (visualIndex * (CONFIG.bigWidth + CONFIG.gap));
-    const centerFix = (screenCenter - (CONFIG.bigWidth / 2));
-    moreTrack.style.transform = `translateX(${-(offset - centerFix)}px)`;
+  const visualIndex = moreIndex + CONFIG.clones;
+  const screenCenter = window.innerWidth / 2;
+  const offset = visualIndex * (CONFIG.bigWidth + CONFIG.gap);
+  const centerFix = screenCenter - CONFIG.bigWidth / 2;
+  moreTrack.style.transform = `translateX(${-(offset - centerFix)}px)`;
 
-    // only play video in center, pause others
-    const allItems = document.querySelectorAll('.more-item');
+  // only play video in center, pause others
+  const allItems = document.querySelectorAll(".more-item");
 
-    allItems.forEach((item, idx) => {
-        const video = item.querySelector('video');
+  allItems.forEach((item, idx) => {
+    const video = item.querySelector("video");
 
-        if (idx === visualIndex) {
-            item.classList.add('active');
-            if (video) {
-                video.currentTime = 0;
-                video.play();
-            }
-        } else {
-            item.classList.remove('active');
-            if (video) {
-                video.pause();
-                video.currentTime = 0;
-            }
-        }
-    });
+    if (idx === visualIndex) {
+      item.classList.add("active");
+      if (video) {
+        video.currentTime = 0;
+        video.play();
+      }
+    } else {
+      item.classList.remove("active");
+      if (video) {
+        video.pause();
+        video.currentTime = 0;
+      }
+    }
+  });
 
-    // update dots
-    const dots = moreDots.querySelectorAll('li');
-    dots.forEach((dot, idx) => {
-        if (idx === moreIndex) {
-            dot.style.width = "32px";
-            dot.style.backgroundColor = "white";
-        } else {
-            dot.style.width = "8px";
-            dot.style.backgroundColor = "#6b7280";
-        }
-    });
+  // update dots
+  const dots = moreDots.querySelectorAll("li");
+  dots.forEach((dot, idx) => {
+    if (idx === moreIndex) {
+      dot.style.width = "32px";
+      dot.style.backgroundColor = "white";
+    } else {
+      dot.style.width = "8px";
+      dot.style.backgroundColor = "#6b7280";
+    }
+  });
 }
 
 function clickMoreItem(index) {
-    moreIndex = index;
-    updateMoreCarousel(true);
+  moreIndex = index;
+  updateMoreCarousel(true);
 }
 
 // reset when hitting clones
-moreTrack.addEventListener('transitionend', () => {
-    if (moreIndex >= moreTotal) { moreIndex = 0; updateMoreCarousel(false); }
-    else if (moreIndex < 0) { moreIndex = moreTotal - 1; updateMoreCarousel(false); }
+moreTrack.addEventListener("transitionend", () => {
+  if (moreIndex >= moreTotal) {
+    moreIndex = 0;
+    updateMoreCarousel(false);
+  } else if (moreIndex < 0) {
+    moreIndex = moreTotal - 1;
+    updateMoreCarousel(false);
+  }
 });
 
 // wheel scroll for second carousel
 let isMoreScrolling = false;
-moreTrack.addEventListener('wheel', (e) => {
+moreTrack.addEventListener(
+  "wheel",
+  (e) => {
     if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) {
-        e.preventDefault();
-        if (isMoreScrolling) return;
-        if (e.deltaX > 20) {
-            isMoreScrolling = true; moreIndex++; updateMoreCarousel(true); setTimeout(() => isMoreScrolling = false, 600);
-        } else if (e.deltaX < -20) {
-            isMoreScrolling = true; moreIndex--; updateMoreCarousel(true); setTimeout(() => isMoreScrolling = false, 600);
-        }
+      e.preventDefault();
+      if (isMoreScrolling) return;
+      if (e.deltaX > 20) {
+        isMoreScrolling = true;
+        moreIndex++;
+        updateMoreCarousel(true);
+        setTimeout(() => (isMoreScrolling = false), 600);
+      } else if (e.deltaX < -20) {
+        isMoreScrolling = true;
+        moreIndex--;
+        updateMoreCarousel(true);
+        setTimeout(() => (isMoreScrolling = false), 600);
+      }
     }
-}, { passive: false });
+  },
+  { passive: false }
+);
 
 // handle window resize
 let resizeTimer;
-window.addEventListener('resize', () => {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(() => {
-        applyLayout();
-        render();
-        renderMoreApple();
-        updateCarousel(false);
-        updateMoreCarousel(false);
-    }, 50);
+window.addEventListener("resize", () => {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(() => {
+    applyLayout();
+    render();
+    renderMoreApple();
+    updateCarousel(false);
+    updateMoreCarousel(false);
+  }, 50);
 });
 
 // keyboard arrows to navigate
-document.addEventListener('keydown', (e) => {
-    if (e.key === 'ArrowLeft') { currentIndex--; updateCarousel(true); }
-    else if (e.key === 'ArrowRight') { currentIndex++; updateCarousel(true); }
+document.addEventListener("keydown", (e) => {
+  if (e.key === "ArrowLeft") {
+    currentIndex--;
+    updateCarousel(true);
+  } else if (e.key === "ArrowRight") {
+    currentIndex++;
+    updateCarousel(true);
+  }
 });
 
 // init everything on page load
