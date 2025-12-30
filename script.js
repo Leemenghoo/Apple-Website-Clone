@@ -548,3 +548,15 @@ updateCarousel(false);
 
 renderMoreApple();
 updateMoreCarousel(false);
+
+// slide every 5 seconds Endless entertainment
+setInterval(function() {
+  currentIndex++;
+  updateCarousel(true);
+}, 5000);
+
+// slide every 5 seconds More from Apple
+setInterval(function() {
+  moreIndex++;
+  updateMoreCarousel(true);
+}, 5000);
