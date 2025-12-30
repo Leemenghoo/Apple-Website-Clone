@@ -1,3 +1,17 @@
+// Helper function to get the correct base path for assets (works for both local and GitHub Pages)
+function getAssetPath(relativePath) {
+  // Get the current pathname
+  const pathname = window.location.pathname;
+  // Remove trailing filename (like index.html) and trailing slashes
+  let basePath = pathname.replace(/\/[^\/]*$/, '').replace(/\/$/, '');
+  // If we have a base path (GitHub Pages with repo name), prepend it
+  if (basePath && basePath !== '') {
+    return basePath + '/' + relativePath;
+  }
+  // For local development or root, use relative path
+  return relativePath;
+}
+
 // logos for the carousel items
 const LOGO_ARCADE = `
 <svg viewBox="0 0 387 80" class="h-4 w-auto text-white fill-white drop-shadow-md">
@@ -201,7 +215,7 @@ function render() {
     <li class="big-item shrink-0 relative overflow-hidden group cursor-pointer" 
         style="width: ${CONFIG.bigWidth}px; height: 100%;"
         onclick="clickedItem(${dataIndex})">
-      <img src="${bigData[dataIndex].img}" class="w-full h-full object-cover select-none" draggable="false">
+      <img src="${getAssetPath(bigData[dataIndex].img)}" class="w-full h-full object-cover select-none" draggable="false">
       <div class="text-content absolute bottom-0 w-full p-8 text-white bg-gradient-to-t from-black/80 to-transparent pointer-events-none">
          <span class="bg-white text-black py-[11px] px-[21px] rounded-full text-sm font-bold mr-2">Stream now</span>
          <span class="text-xl font-bold">${bigData[dataIndex].genre}</span> ${bigData[dataIndex].title}
@@ -218,7 +232,7 @@ function render() {
         return `
         <li class="shrink-0 relative overflow-hidden cursor-pointer" style="width: ${CONFIG.smallWidth}px; height: 100%;" onclick="clickedItem(${dataIndex})">
             <div class="w-full h-full relative overflow-hidden" style="background-color: ${item.bgColor}">
-                <img src="${item.img}" class="absolute left-4 top-4 bottom-4 w-auto h-[calc(100%-32px)] rounded-md shadow-md object-cover select-none" draggable="false">
+                <img src="${getAssetPath(item.img)}" class="absolute left-4 top-4 bottom-4 w-auto h-[calc(100%-32px)] rounded-md shadow-md object-cover select-none" draggable="false">
                 <div class="absolute top-4 right-4 pointer-events-none drop-shadow-md">${item.logo}</div>
                 <div class="absolute right-4 top-1/2 -translate-y-1/2 w-2/5 text-left pointer-events-none">
                    <span class="text-white font-bold text-sm leading-tight block line-clamp-3">${item.title}</span>
@@ -231,7 +245,7 @@ function render() {
       } else {
         return `
         <li class="shrink-0 relative overflow-hidden cursor-pointer" style="width: ${CONFIG.smallWidth}px; height: 100%;" onclick="clickedItem(${dataIndex})">
-          <img src="${item.img}" class="w-full h-full object-cover select-none" draggable="false">
+          <img src="${getAssetPath(item.img)}" class="w-full h-full object-cover select-none" draggable="false">
           <div class="absolute top-4 right-4 pointer-events-none drop-shadow-md">${item.logo}</div>
           <div class="absolute bottom-0 w-full p-4 text-white bg-gradient-to-t from-black/80 to-transparent flex justify-between items-center pointer-events-none">
              <span class="text-sm font-bold">${item.title}</span>
@@ -395,9 +409,9 @@ function renderMoreApple() {
       const item = moreAppleData[dataIndex];
 
       const mediaContent = item.video
-        ? `<video src="${item.video}" class="w-full h-full object-cover select-none" muted playsinline></video>`
+        ? `<video src="${getAssetPath(item.video)}" class="w-full h-full object-cover select-none" muted playsinline></video>`
         : `<img src="${
-            item.img || ""
+            item.img ? getAssetPath(item.img) : ""
           }" class="w-full h-full object-cover select-none" draggable="false">`;
 
       return `
