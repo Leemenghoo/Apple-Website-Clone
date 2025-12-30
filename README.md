@@ -1,61 +1,133 @@
 # Apple Website Clone 🍎
-A responsive, pixel-perfect replica of the Apple website (Holiday 2024/2025 theme). This project recreates the core visual experience of apple.com, featuring complex navigation, interactive carousels, and video integration using vanilla JavaScript and Tailwind CSS.
 
-🚀 Live Demo
-https://leemenghoo.github.io/Apple-Clone-Website/
+This project is a simple clone of the Apple website.
+I built it to practice HTML, CSS, Tailwind CSS, and JavaScript.
 
-✨ Key Features
-Responsive Navigation Bar:
+The goal of this project is to learn how a real website works, including navigation menus, sliders, and responsive layout.
 
-Desktop: Full-width dropdown menus with smooth fade/slide transitions and a backdrop blur overlay (navbar.js).
+📌 What is this project?
 
-Mobile: Collapsible hamburger menu with smooth slide animations.
+This is a front-end only website (no backend).
 
-Auto-Hide: The navbar intelligently hides when scrolling down and reappears when scrolling up.
+It looks similar to the Apple website and includes:
 
-Custom Infinite Carousels:
+Navigation bar
 
-Built from scratch in script.js (no external slider libraries).
+Dropdown menus
 
-Entertainment Section: Supports infinite scrolling with cloned items for a seamless loop.
+Image and video carousels
 
-"More from Apple" Section: Features auto-playing video previews when items are active.
+Multiple pages (Home, Support, TV & Home)
 
-Responsive sizing that adapts the number of visible items based on screen width.
+✨ Features
+🔹 Navigation Bar
 
-Modern UI/UX:
+Desktop menu with dropdown when hovering
 
-Replicates Apple's "SF Pro" typography and clean aesthetic.
+Blur background when menu is open
 
-Uses Tailwind CSS for responsive grids, flexbox layouts, and typography.
+Mobile menu with hamburger button
 
-Includes specific pages for Home and Support.
+Works on both desktop and mobile
+
+🔹 Carousel / Slider
+
+Infinite scrolling carousel
+
+Mouse wheel support
+
+Keyboard arrow support
+
+Auto slide every 5 seconds
+
+Dots indicator to show current slide
+
+Video plays only on the active slide
+
+🔹 Responsive Design
+
+Works on mobile, tablet, and desktop
+
+Layout changes based on screen size
+
+Built using Tailwind CSS
 
 🛠️ Technologies Used
-HTML5: Semantic structure for accessibility.
 
-CSS3 & Tailwind CSS: Styling is handled via the Tailwind CDN for rapid development, plus a custom style.css for specific animations and scrollbar hiding.
+HTML5 – page structure
 
-Vanilla JavaScript:
+CSS3 – custom styles and animations
 
-script.js: Handles data injection, carousel logic, and media playback.
+Tailwind CSS (CDN) – layout and responsive design
 
-navbar.js: Manages menu interactions, hover states, and overlay effects.
+Vanilla JavaScript – logic for:
+
+Navigation menu
+
+Carousels
+
+Auto sliding
+
+Video play / pause
+
+No frameworks like React or Vue are used.
 
 📂 Project Structure
-Plaintext
+├── index.html        # Main home page
+├── support.html      # Support page
+├── tv&home.html      # TV & Home page
+├── styles.css        # Custom CSS styles
+├── script.js         # Carousel logic and data
+├── navbar.js         # Navigation bar logic
+├── img/              # Images and icons
+└── mp4/              # Video files
 
-├── index.html       # Main landing page (Holiday hero, promos, carousels)
-├── support.html     # Support page (Search, repair options, device grid)
-├── tv&home.html     # TV & Home page
-├── style.css        # Custom overrides and font imports
-├── script.js        # Logic for the dynamic carousels and data rendering
-├── navbar.js        # Logic for the responsive navigation bar
-└── img/             # Folder containing product images and icons
-⚡ How to Run
-Clone the repository:
+▶️ How to Run This Project
+Option 1: Open directly
 
-Bash
+Download or clone this project
 
-git clone https://git.clp.kr/anbschool/4th/generont/phat-lymeng/apple-clone-website.git
-Open the project: Simply open the index.html file in any modern web browser. (Note: Since Tailwind is loaded via CDN, you need an active internet connection to see the styles correctly).
+Open index.html in your browser
+
+Make sure you have internet (Tailwind uses CDN)
+
+Option 2: Live Server (recommended)
+
+If you use VS Code:
+
+Install Live Server extension
+
+Right click index.html
+
+Click Open with Live Server
+
+📖 What I Learned
+
+From this project, I learned:
+
+How dropdown menus work
+
+How to build a carousel without libraries
+
+How to control video using JavaScript
+
+How responsive layouts work
+
+How to organize JavaScript code better
+
+⚠️ Notes
+
+This project is for learning only
+
+It is not an official Apple website
+
+Images and design are used for practice purpose
+
+🙌 Author
+
+Built by a student learning front-end development
+This project helped me understand real-world UI behavior.
+
+<img width="1512" height="810" alt="image" src="https://github.com/user-attachments/assets/461538ca-d7d1-4803-8511-159c80055d59" />
+<img width="1512" height="833" alt="image" src="https://github.com/user-attachments/assets/ca3a16d1-370a-45aa-99b0-27d1e468eb63" />
+<img width="1512" height="788" alt="image" src="https://github.com/user-attachments/assets/871b6d32-192e-4801-a703-212ffbce1986" />
