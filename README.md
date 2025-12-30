@@ -7,72 +7,84 @@ The goal of this project is to learn how a real website works, including navigat
 
 📌 What is this project?
 
-This is a front-end only website (no backend).
+```
+- This is a front-end only website (no backend).
 
-It looks similar to the Apple website and includes:
+- It looks similar to the Apple website and includes:
 
-Navigation bar
+- Navigation bar
 
-Dropdown menus
+- Dropdown menus
 
-Image and video carousels
+- Image and video carousels
 
-Multiple pages (Home, Support, TV & Home)
+- Multiple pages (Home, Support, TV & Home)
+```
 
 ✨ Features
 🔹 Navigation Bar
 
-Desktop menu with dropdown when hovering
+```
+- Desktop menu with dropdown when hovering
 
-Blur background when menu is open
+- Blur background when menu is open
 
-Mobile menu with hamburger button
+- Mobile menu with hamburger button
 
-Works on both desktop and mobile
+- Works on both desktop and mobile
+```
 
 🔹 Carousel / Slider
 
-Infinite scrolling carousel
+```
+- Infinite scrolling carousel
 
-Mouse wheel support
+- Mouse wheel support
 
-Keyboard arrow support
+- Keyboard arrow support
 
-Auto slide every 5 seconds
+- Auto slide every 5 seconds
 
-Dots indicator to show current slide
+- Dots indicator to show current slide
 
-Video plays only on the active slide
+- Video plays only on the active slide
+```
 
 🔹 Responsive Design
 
-Works on mobile, tablet, and desktop
+```
+- Works on mobile, tablet, and desktop
 
-Layout changes based on screen size
+- Layout changes based on screen size
 
-Built using Tailwind CSS
+- Built using Tailwind CSS
+```
 
 🛠️ Technologies Used
 
-HTML5 – page structure
+```
+- HTML5 – page structure
 
-CSS3 – custom styles and animations
+- CSS3 – custom styles and animations
 
-Tailwind CSS (CDN) – layout and responsive design
+- Tailwind CSS (CDN) – layout and responsive design
 
-Vanilla JavaScript – logic for:
+- Vanilla JavaScript – logic for:
 
-Navigation menu
+- Navigation menu
 
-Carousels
+- Carousels
 
-Auto sliding
+- Auto sliding
 
-Video play / pause
+- Video play / pause
 
-No frameworks like React or Vue are used.
+- No frameworks like React or Vue are used.
+```
 
 📂 Project Structure
+
+```
 ├── index.html        # Main home page
 ├── support.html      # Support page
 ├── tv&home.html      # TV & Home page
@@ -81,47 +93,50 @@ No frameworks like React or Vue are used.
 ├── navbar.js         # Navigation bar logic
 ├── img/              # Images and icons
 └── mp4/              # Video files
+```
 
 ▶️ How to Run This Project
 Option 1: Open directly
 
-Download or clone this project
+```
+- Download or clone this project
 
-Open index.html in your browser
+- Open index.html in your browser
 
-Make sure you have internet (Tailwind uses CDN)
+- Make sure you have internet (Tailwind uses CDN)
+```
 
 Option 2: Live Server (recommended)
 
-If you use VS Code:
+```
+- If you use VS Code:
 
-Install Live Server extension
+- Install Live Server extension
 
-Right click index.html
+- Right click index.html
 
-Click Open with Live Server
+- Click Open with Live Server
+```
 
 📖 What I Learned
 
-From this project, I learned:
+```
+- From this project, I learned:
 
-How dropdown menus work
+- How dropdown menus work
 
-How to build a carousel without libraries
+- How to build a carousel without libraries
 
-How to control video using JavaScript
+- How to control video using JavaScript
 
-How responsive layouts work
+- How responsive layouts work
 
-How to organize JavaScript code better
+- How to organize JavaScript code better
+```
 
 ⚠️ Notes
 
-This project is for learning only
-
-It is not an official Apple website
-
-Images and design are used for practice purpose
+This project is for learning only. It is not an official Apple website. Images and design are used for practice purpose
 
 🙌 Author
 
